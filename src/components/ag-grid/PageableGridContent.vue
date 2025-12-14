@@ -45,7 +45,7 @@ const defaultColDef = {
 const defaultGridOptions = {
   pagination: true,
   paginationPageSize: 10,
-  rowSelection: 'multiple',
+  rowSelection: 'multiple' as const,
   suppressCellFocus: true,
   animateRows: false,
   rowHeight: 50,    

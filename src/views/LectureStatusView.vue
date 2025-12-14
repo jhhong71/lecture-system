@@ -61,7 +61,8 @@ interface LectureSearchRequest {
 
 // --- [Service Layer] API 서비스 ---
 // [중요] 백엔드 서버 주소 설정 (Spring Boot 기본 포트: 8080)
-const API_BASE_URL = 'http://localhost:8080/api/v1';
+//const API_BASE_URL = 'http://localhost:8080/api/v1';
+const API_BASE_URL = 'https://lecture-system-backend.onrender.com/api/v1';
 
 const LectureApiService = {
   /**

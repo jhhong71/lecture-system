@@ -138,7 +138,7 @@ const columnDefs = [
 
 const gridOptions = {
   paginationPageSize: 10,
-  rowSelection: 'multiple'
+  rowSelection: 'multiple' as const
 };
 
 // --- 이벤트 핸들러 ---

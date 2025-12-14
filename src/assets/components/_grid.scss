@@ -1,0 +1,74 @@
+.grid-wrapper {
+  width: 100%;
+  height: 600px;
+  background-color: white;
+  border: 10px solid #e0e0e0; // [수정] 진한 상단 테두리 제거 -> 일반 테두리로 변경
+
+  // --- AG Grid Quartz 테마 커스텀 변수 ---
+  --ag-font-family: 'Noto Sans KR', sans-serif;
+  --ag-font-size: 13px;
+  --ag-background-color: #fff;
+  --ag-foreground-color: #555;
+  
+  // [수정] 헤더 스타일 변경 (연한 회색 배경)
+  --ag-header-background-color: #f8f9fa; 
+  --ag-header-foreground-color: #333;
+  --ag-header-height: 50px;
+  
+  // 테두리 스타일
+  --ag-cell-horizontal-border: solid 1px #eee;
+  --ag-wrapper-border-radius: 0;
+  --ag-border-color: #e0e0e0;
+  
+  // 행 스타일
+  --ag-row-hover-color: #f1f5f9;
+  --ag-selected-row-background-color: #f1f8ff;
+  --ag-row-border-color: #eee;
+
+  // 1. 헤더 중앙 정렬 및 스타일
+  :deep(.ag-header-cell-label) {
+    justify-content: center !important;
+    font-weight: 700; // 굵기 조정
+    color: #495057;
+  }
+  
+  // 헤더 하단 구분선
+  :deep(.ag-header) {
+    border-bottom: 1px solid #dee2e6 !important;
+  }
+
+  // 2. 데이터 셀 중앙 정렬
+  :deep(.ag-cell) {
+    display: flex;
+    align-items: center;     
+    justify-content: center; 
+    line-height: normal;
+    border-right: none !important;
+  }
+
+  // 3. 텍스트 정렬 유틸리티
+  :deep(.text-left) {
+    justify-content: flex-start !important;
+    padding-left: 20px;
+  }
+  :deep(.text-right) {
+    justify-content: flex-end !important;
+    padding-right: 20px;
+  }
+
+  // 4. 체크박스 중앙 정렬
+  :deep(.ag-selection-checkbox) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  // 5. 페이지네이션 패널
+  :deep(.ag-paging-panel) {
+    border-top: 1px solid #e0e0e0;
+    font-size: 13px;
+    color: #666;
+    height: 50px;
+  }
+}

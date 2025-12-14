@@ -1,0 +1,103 @@
+// --------------------------------------------------------------------------
+// Spacing Utilities (Margin & Padding)
+// --------------------------------------------------------------------------
+
+// 기본 유틸리티
+.pd-m-auto { margin: 0 auto; }
+.pd-margin0 { margin: 0 !important; }
+.pd-padding0 { padding: 0 !important; }
+
+// Margin & Padding Loop (0px ~ 100px)
+@for $i from 0 through 100 {
+  // Margin
+  .pd-my#{$i} { margin-top: #{$i}px !important; margin-bottom: #{$i}px !important; }
+  .pd-mx#{$i} { margin-left: #{$i}px !important; margin-right: #{$i}px !important; }
+  .pd-mt#{$i} { margin-top: #{$i}px !important; }
+  .pd-mr#{$i} { margin-right: #{$i}px !important; }
+  .pd-mb#{$i} { margin-bottom: #{$i}px !important; }
+  .pd-ml#{$i} { margin-left: #{$i}px !important; }
+  
+  // Negative Margin (1px부터 시작)
+  @if $i > 0 {
+    .pd--mt#{$i} { margin-top: -#{$i}px !important; }
+  }
+
+  // Padding
+  .pd-padding#{$i} { padding: #{$i}px !important; }
+  .pd-py#{$i} { padding-top: #{$i}px !important; padding-bottom: #{$i}px !important; }
+  .pd-px#{$i} { padding-left: #{$i}px !important; padding-right: #{$i}px !important; }
+  .pd-pt#{$i} { padding-top: #{$i}px !important; }
+  .pd-pr#{$i} { padding-right: #{$i}px !important; }
+  .pd-pb#{$i} { padding-bottom: #{$i}px !important; }
+  .pd-pl#{$i} { padding-left: #{$i}px !important; }
+}
+
+// --------------------------------------------------------------------------
+// Flexbox Utilities
+// --------------------------------------------------------------------------
+
+// 기본 Flex 설정 (pd-flex-로 시작하는 클래스 공통 스타일)
+[class*="pd-flex-"] {
+  display: flex;
+  max-width: 100%;
+  word-break: keep-all;
+}
+
+// Display
+.pd-flex-show { display: flex !important; }
+.pd-flex-inline { display: inline-flex !important; }
+.pd-flex-inline-show { display: inline-flex !important; }
+
+// Direction
+.pd-flex-col { flex-direction: column !important; }
+.pd-flex-col-reverse { flex-direction: column-reverse !important; }
+.pd-flex-row { flex-direction: row !important; }
+.pd-flex-row-reverse { flex-direction: row-reverse !important; }
+
+// Wrap
+.pd-flex-wrap { flex-wrap: wrap !important; }
+.pd-flex-wrap-reverse { flex-wrap: wrap-reverse !important; }
+.pd-flex-nowrap { flex-wrap: nowrap !important; }
+
+// Flex Grow / Shrink / Basis
+.pd-flex-fix { flex: 0 0 fit-content !important; }
+.pd-flex-1 { flex: 1 1 0% !important; }
+.pd-flex-auto { flex: 0 0 auto !important; }
+.pd-flex-none { flex: none !important; }
+.pd-flex-shrink-0 { flex-shrink: 0 !important; }
+
+// Justify Content
+.pd-space-between { justify-content: space-between !important; }
+.pd-space-around { justify-content: space-around !important; }
+.pd-justify-center { justify-content: center !important; }
+.pd-flex-end { justify-content: flex-end !important; }
+.pd-flex-start { justify-content: flex-start !important; }
+
+// Align Items
+.pd-align-center { align-items: center !important; }
+.pd-align-end { align-items: flex-end !important; }
+.pd-align-start { align-items: flex-start !important; }
+
+// Align Content
+.pd-align-content-center { align-content: center !important; }
+.pd-align-content-start { align-content: flex-start !important; }
+.pd-align-content-end { align-content: flex-end !important; }
+.pd-align-content-between { align-content: space-between !important; }
+.pd-align-content-around { align-content: space-around !important; }
+
+// Helper: 완전 중앙 정렬
+.pd-flex-all-center {
+  justify-content: center !important;
+  align-items: center !important;
+  text-align: center;
+}
+
+// --------------------------------------------------------------------------
+// Gap Utilities (1px ~ 100px)
+// --------------------------------------------------------------------------
+
+@for $i from 1 through 100 {
+  .pd-gap#{$i} {
+    gap: #{$i}px !important;
+  }
+}

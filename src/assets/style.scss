@@ -1,0 +1,18 @@
+// 1. 설정 및 도구 
+@use 'abstracts/variables' as *;
+@use 'abstracts/mixins' as *;
+
+// 2. 기본 스타일
+@use 'base/util';       
+// @use 'base/typography';
+
+// 3. 컴포넌트 스타일
+@use 'components/buttons';
+@use 'components/inputs';
+@use 'components/selects';
+@use 'components/grid';
+
+// 4. 레이아웃
+@use 'layout/header';
+@use 'layout/sidebar';
+@use 'layout/content';

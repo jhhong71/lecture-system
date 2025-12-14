@@ -1,7 +1,3 @@
-<script setup lang="ts">
-const emit = defineEmits(['click']);
-</script>
-
 <template>
   <v-btn
     color="primary"
@@ -10,7 +6,11 @@ const emit = defineEmits(['click']);
     elevation="2"
     prepend-icon="mdi-magnify"
     @click="emit('click')"
-  >
+    >
     검색
   </v-btn>
 </template>
+
+<script setup lang="ts">
+  const emit = defineEmits(['click']);
+</script>

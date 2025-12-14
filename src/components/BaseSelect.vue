@@ -9,7 +9,6 @@ const props = defineProps<{
 
 const emit = defineEmits(['update:modelValue']);
 
-// v-model 데이터 동기화를 위한 설정
 const internalValue = computed({
   get: () => props.modelValue,
   set: (val) => emit('update:modelValue', val)
